@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2,#6dd5ed);
+    background-size:400% 400%;
+    animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.card{
+    width:360px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    color:white;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+h1{
+    margin-top:15px;
+    font-size:28px;
+}
+
+.role{
+    color:#f8f8f8;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.skills-title{
+    margin:20px 0 10px;
+    font-size:20px;
+}
+
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skills span{
+    background:white;
+    color:#444;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.skills span:hover{
+    background:#222;
+    color:white;
+    transform:scale(1.1);
+}
+
+.github{
+    margin-top:25px;
+}
+
+.github a{
+    text-decoration:none;
+    color:white;
+    background:#111;
+    padding:12px 28px;
+    border-radius:40px;
+    display:inline-block;
+    font-weight:600;
+    transition:.4s;
+}
+
+.github a:hover{
+    background:#00b894;
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:20px;
+    font-size:13px;
+    opacity:.8;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+    <img src="student-photo.jpg" class="profile-img" alt="Student Photo">
+
+    <h1>John Doe</h1>
+    <p class="role">Computer Science Student</p>
+
+    <h2 class="skills-title">Skills</h2>
+
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>Git</span>
+        <span>GitHub</span>
+    </div>
+
+    <div class="github">
+        <a href="https://github.com/johndoe" target="_blank">
+            🔗 Visit GitHub
+        </a>
+    </div>
+
+    <div class="footer">
+        Web Development Team
+    </div>
+
+</div>
+
+</body>
+</html>
