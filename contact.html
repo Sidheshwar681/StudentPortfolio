@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Contact Section</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.contact-section{
+    width:90%;
+    max-width:1000px;
+    display:flex;
+    overflow:hidden;
+    border-radius:20px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.left{
+    flex:1;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:#fff;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.left p{
+    font-size:16px;
+    line-height:1.8;
+    opacity:.9;
+}
+
+.left .social{
+    margin-top:30px;
+}
+
+.left .social i{
+    width:45px;
+    height:45px;
+    background:#fff;
+    color:#2575fc;
+    border-radius:50%;
+    text-align:center;
+    line-height:45px;
+    margin-right:12px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.left .social i:hover{
+    transform:translateY(-8px) rotate(360deg);
+}
+
+.right{
+    flex:1;
+    padding:50px;
+    background:#fff;
+}
+
+.right h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:25px;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:16px;
+    color:#666;
+}
+
+.input-box input,
+.input-box textarea{
+    width:100%;
+    padding:15px 15px 15px 45px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    transition:.3s;
+    outline:none;
+}
+
+.input-box textarea{
+    height:140px;
+    resize:none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+    border-color:#2575fc;
+    box-shadow:0 0 10px rgba(37,117,252,.3);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 20px rgba(37,117,252,.4);
+}
+
+@media(max-width:768px){
+    .contact-section{
+        flex-direction:column;
+    }
+
+    .left,
+    .right{
+        padding:35px;
+    }
+
+    .left h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-section">
+
+    <div class="left">
+        <h1>Let's Connect</h1>
+        <p>
+            We'd love to hear from you. Whether you have a question,
+            feedback, or a business inquiry, send us a message and
+            we'll get back to you as soon as possible.
+        </p>
+
+        <div class="social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+
+    <div class="right">
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-comment"></i>
+                <textarea placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
